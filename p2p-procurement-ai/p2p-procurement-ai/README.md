@@ -233,5 +233,5 @@ significantly extended with:
 
 Shubham Mudliar
 Senior Technical Consultant — Data & AI
-[LinkedIn](https://linkedin.com/in/your-profile)
-[GitHub](https://github.com/your-username)
+[LinkedIn](https://www.linkedin.com/in/shubham-mudliar)
+[GitHub](https://github.com/shubhammudliar27)
