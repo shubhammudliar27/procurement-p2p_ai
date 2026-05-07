@@ -1,0 +1,65 @@
+```mermaid
+flowchart TB
+    subgraph Sources["📁 Source Documents"]
+        S1[Azure Blob Storage\npurchase_order/\ngood_receipt/\ninvoice/]
+    end
+
+    subgraph Ingestion["🔄 Ingestion"]
+        B1[UC Volume Sync\n01_bronze_ingestion.py\nSize-based dedup]
+    end
+
+    subgraph Bronze["🥉 Bronze Layer"]
+        B2[purchase_order\n60 rows]
+        B3[good_receipt\n60 rows]
+        B4[invoice\n64 rows]
+        B5[quarantine\n0 rows]
+    end
+
+    subgraph Silver["🥈 Silver Layer"]
+        S2[purchase_order\nai_extract + regex\n100% complete]
+        S3[good_receipt\nai_extract + regex\n100% complete]
+        S4[invoice\nai_extract + regex\n100% complete]
+        S5[extraction_audit\n184 rows]
+    end
+
+    subgraph Gold["🥇 Gold Layer"]
+        G1[reconciliation_results\n64 rows]
+        G2[approved_matches\n38 rows]
+        G3[exception_queue\n26 rows]
+        G4[audit_log\n64 rows]
+    end
+
+    subgraph Eval["📊 Evaluation"]
+        E1[MLflow Experiment\neval_harness\n95.3% accuracy]
+    end
+
+    subgraph Serving["📤 Serving"]
+        V1[Power BI Dashboard]
+        V2[Exception Alerts\nEmail / Teams]
+        V3[ERP API\nSAP / Oracle]
+    end
+
+    S1 --> B1
+    B1 --> B2 & B3 & B4 & B5
+    B2 --> S2
+    B3 --> S3
+    B4 --> S4
+    S2 & S3 & S4 --> S5
+    S2 & S3 & S4 --> G1
+    G1 --> G2 & G3 & G4
+    G1 --> E1
+    G2 --> V1 & V3
+    G3 --> V2
+
+    classDef bronze fill:#CD7F32,color:#fff,stroke:#A0522D
+    classDef silver fill:#C0C0C0,color:#222,stroke:#808080
+    classDef gold   fill:#FFD700,color:#222,stroke:#B8860B
+    classDef eval   fill:#9B59B6,color:#fff,stroke:#6C3483
+    classDef serve  fill:#27AE60,color:#fff,stroke:#1E8449
+
+    class B2,B3,B4,B5 bronze
+    class S2,S3,S4,S5 silver
+    class G1,G2,G3,G4 gold
+    class E1 eval
+    class V1,V2,V3 serve
+```

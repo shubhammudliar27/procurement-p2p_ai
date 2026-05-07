@@ -1,0 +1,65 @@
+scenario,po_number,invoice_number,gr_number,expected_overall_match,expected_po_match,expected_gr_match,notes
+MATCH_EXACT,PO-2025-0001,INV-2025-0001,GR-2025-0001,True,True,True,1 line item(s) — all fields match exactly
+MATCH_EXACT,PO-2025-0002,INV-2025-0002,GR-2025-0002,True,True,True,1 line item(s) — all fields match exactly
+MATCH_EXACT,PO-2025-0003,INV-2025-0003,GR-2025-0003,True,True,True,3 line item(s) — all fields match exactly
+MATCH_EXACT,PO-2025-0004,INV-2025-0004,GR-2025-0004,True,True,True,1 line item(s) — all fields match exactly
+MATCH_EXACT,PO-2025-0005,INV-2025-0005,GR-2025-0005,True,True,True,2 line item(s) — all fields match exactly
+MATCH_EXACT,PO-2025-0006,INV-2025-0006,GR-2025-0006,True,True,True,2 line item(s) — all fields match exactly
+MATCH_EXACT,PO-2025-0007,INV-2025-0007,GR-2025-0007,True,True,True,1 line item(s) — all fields match exactly
+MATCH_EXACT,PO-2025-0008,INV-2025-0008,GR-2025-0008,True,True,True,1 line item(s) — all fields match exactly
+MATCH_EXACT,PO-2025-0009,INV-2025-0009,GR-2025-0009,True,True,True,2 line item(s) — all fields match exactly
+MATCH_EXACT,PO-2025-0010,INV-2025-0010,GR-2025-0010,True,True,True,4 line item(s) — all fields match exactly
+MATCH_EXACT,PO-2025-0011,INV-2025-0011,GR-2025-0011,True,True,True,2 line item(s) — all fields match exactly
+MATCH_EXACT,PO-2025-0012,INV-2025-0012,GR-2025-0012,True,True,True,1 line item(s) — all fields match exactly
+MATCH_EXACT,PO-2025-0013,INV-2025-0013,GR-2025-0013,True,True,True,2 line item(s) — all fields match exactly
+MATCH_EXACT,PO-2025-0014,INV-2025-0014,GR-2025-0014,True,True,True,2 line item(s) — all fields match exactly
+MATCH_EXACT,PO-2025-0015,INV-2025-0015,GR-2025-0015,True,True,True,1 line item(s) — all fields match exactly
+MATCH_TOLERANCE,PO-2025-0016,INV-2025-0016,GR-2025-0016,True,True,True,2 line(s) — price +2.8% over PO (within 5% tolerance)
+MATCH_TOLERANCE,PO-2025-0017,INV-2025-0017,GR-2025-0017,True,True,True,1 line(s) — price +2.4% over PO (within 5% tolerance)
+MATCH_TOLERANCE,PO-2025-0018,INV-2025-0018,GR-2025-0018,True,True,True,2 line(s) — price +2.3% over PO (within 5% tolerance)
+MATCH_TOLERANCE,PO-2025-0019,INV-2025-0019,GR-2025-0019,True,True,True,2 line(s) — price +2.8% over PO (within 5% tolerance)
+MATCH_TOLERANCE,PO-2025-0020,INV-2025-0020,GR-2025-0020,True,True,True,4 line(s) — price +3.6% over PO (within 5% tolerance)
+MATCH_TOLERANCE,PO-2025-0021,INV-2025-0021,GR-2025-0021,True,True,True,2 line(s) — price +3.1% over PO (within 5% tolerance)
+MATCH_TOLERANCE,PO-2025-0022,INV-2025-0022,GR-2025-0022,True,True,True,3 line(s) — price +2.2% over PO (within 5% tolerance)
+MATCH_TOLERANCE,PO-2025-0023,INV-2025-0023,GR-2025-0023,True,True,True,1 line(s) — price +3.9% over PO (within 5% tolerance)
+MATCH_TOLERANCE,PO-2025-0024,INV-2025-0024,GR-2025-0024,True,True,True,1 line(s) — price +3.7% over PO (within 5% tolerance)
+MATCH_TOLERANCE,PO-2025-0025,INV-2025-0025,GR-2025-0025,True,True,True,2 line(s) — price +3.9% over PO (within 5% tolerance)
+MATCH_PARTIAL_DELIVERY,PO-2025-0026,INV-2025-0026,GR-2025-0026,True,True,True,"4 line(s) — partial delivery, invoice matches GR qty"
+MATCH_PARTIAL_DELIVERY,PO-2025-0027,INV-2025-0027,GR-2025-0027,True,True,True,"3 line(s) — partial delivery, invoice matches GR qty"
+MATCH_PARTIAL_DELIVERY,PO-2025-0028,INV-2025-0028,GR-2025-0028,True,True,True,"4 line(s) — partial delivery, invoice matches GR qty"
+MATCH_PARTIAL_DELIVERY,PO-2025-0029,INV-2025-0029,GR-2025-0029,True,True,True,"2 line(s) — partial delivery, invoice matches GR qty"
+MATCH_PARTIAL_DELIVERY,PO-2025-0030,INV-2025-0030,GR-2025-0030,True,True,True,"1 line(s) — partial delivery, invoice matches GR qty"
+MATCH_PARTIAL_DELIVERY,PO-2025-0031,INV-2025-0031,GR-2025-0031,True,True,True,"2 line(s) — partial delivery, invoice matches GR qty"
+MATCH_PARTIAL_DELIVERY,PO-2025-0032,INV-2025-0032,GR-2025-0032,True,True,True,"1 line(s) — partial delivery, invoice matches GR qty"
+MATCH_PARTIAL_DELIVERY,PO-2025-0033,INV-2025-0033,GR-2025-0033,True,True,True,"2 line(s) — partial delivery, invoice matches GR qty"
+EXC_QTY_MISMATCH,PO-2025-0034,INV-2025-0034,GR-2025-0034,False,True,False,Line M004: invoice qty=19 > GR qty=14
+EXC_QTY_MISMATCH,PO-2025-0035,INV-2025-0035,GR-2025-0035,False,True,False,Line M008: invoice qty=27 > GR qty=17
+EXC_QTY_MISMATCH,PO-2025-0036,INV-2025-0036,GR-2025-0036,False,True,False,Line M009: invoice qty=41 > GR qty=36
+EXC_QTY_MISMATCH,PO-2025-0037,INV-2025-0037,GR-2025-0037,False,True,False,Line M007: invoice qty=15 > GR qty=12
+EXC_QTY_MISMATCH,PO-2025-0038,INV-2025-0038,GR-2025-0038,False,True,False,Line M008: invoice qty=31 > GR qty=20
+EXC_QTY_MISMATCH,PO-2025-0039,INV-2025-0039,GR-2025-0039,False,True,False,Line M005: invoice qty=50 > GR qty=39
+EXC_QTY_MISMATCH,PO-2025-0040,INV-2025-0040,GR-2025-0040,False,True,False,Line M001: invoice qty=35 > GR qty=32
+EXC_QTY_MISMATCH,PO-2025-0041,INV-2025-0041,GR-2025-0041,False,True,False,Line M003: invoice qty=12 > GR qty=6
+EXC_PRICE_MISMATCH,PO-2025-0042,INV-2025-0042,GR-2025-0042,False,False,True,Line M010: invoice price +16.7% over PO — exceeds 5%
+EXC_PRICE_MISMATCH,PO-2025-0043,INV-2025-0043,GR-2025-0043,False,False,True,Line M010: invoice price +17.4% over PO — exceeds 5%
+EXC_PRICE_MISMATCH,PO-2025-0044,INV-2025-0044,GR-2025-0044,False,False,True,Line M007: invoice price +14.4% over PO — exceeds 5%
+EXC_PRICE_MISMATCH,PO-2025-0045,INV-2025-0045,GR-2025-0045,False,False,True,Line M010: invoice price +9.9% over PO — exceeds 5%
+EXC_PRICE_MISMATCH,PO-2025-0046,INV-2025-0046,GR-2025-0046,False,False,True,Line M005: invoice price +12.2% over PO — exceeds 5%
+EXC_PRICE_MISMATCH,PO-2025-0047,INV-2025-0047,GR-2025-0047,False,False,True,Line M001: invoice price +21.1% over PO — exceeds 5%
+EXC_WRONG_VENDOR,PO-2025-0048,INV-2025-0048,GR-2025-0048,False,False,False,PO vendor=Zephyr Trading LLC ≠ Invoice vendor=Meridian Commerce FZ LLC
+EXC_WRONG_VENDOR,PO-2025-0049,INV-2025-0049,GR-2025-0049,False,False,False,PO vendor=Orion Supply Group FZ LLC ≠ Invoice vendor=Pinnacle Industrial Supply LLC
+EXC_WRONG_VENDOR,PO-2025-0050,INV-2025-0050,GR-2025-0050,False,False,False,PO vendor=Crestline Procurement LLC ≠ Invoice vendor=Solaris Global Trading LLC
+EXC_WRONG_VENDOR,PO-2025-0051,INV-2025-0051,GR-2025-0051,False,False,False,PO vendor=Meridian Commerce FZ LLC ≠ Invoice vendor=Vantage Logistics FZ LLC
+EXC_WRONG_VENDOR,PO-2025-0052,INV-2025-0052,GR-2025-0052,False,False,False,PO vendor=Pinnacle Industrial Supply LLC ≠ Invoice vendor=Zephyr Trading LLC
+EXC_DUPLICATE_ORIGINAL,PO-2025-0053,INV-2025-0053,GR-2025-0053,True,True,True,Original — first submission
+EXC_DUPLICATE_RESUBMIT,PO-2025-0053,INV-2025-0053-DUP,GR-2025-0053,False,True,True,Duplicate — same PO/GR already matched
+EXC_DUPLICATE_ORIGINAL,PO-2025-0054,INV-2025-0054,GR-2025-0054,True,True,True,Original — first submission
+EXC_DUPLICATE_RESUBMIT,PO-2025-0054,INV-2025-0054-DUP,GR-2025-0054,False,True,True,Duplicate — same PO/GR already matched
+EXC_DUPLICATE_ORIGINAL,PO-2025-0055,INV-2025-0055,GR-2025-0055,True,True,True,Original — first submission
+EXC_DUPLICATE_RESUBMIT,PO-2025-0055,INV-2025-0055-DUP,GR-2025-0055,False,True,True,Duplicate — same PO/GR already matched
+EXC_DUPLICATE_ORIGINAL,PO-2025-0056,INV-2025-0056,GR-2025-0056,True,True,True,Original — first submission
+EXC_DUPLICATE_RESUBMIT,PO-2025-0056,INV-2025-0056-DUP,GR-2025-0056,False,True,True,Duplicate — same PO/GR already matched
+EXC_GR_DATE_AFTER_INVOICE,PO-2025-0057,INV-2025-0057,GR-2025-0057,False,True,False,Invoice 2025-10-19 before GR 2025-10-31 — fraud signal
+EXC_GR_DATE_AFTER_INVOICE,PO-2025-0058,INV-2025-0058,GR-2025-0058,False,True,False,Invoice 2025-10-24 before GR 2025-11-05 — fraud signal
+EXC_GR_DATE_AFTER_INVOICE,PO-2025-0059,INV-2025-0059,GR-2025-0059,False,True,False,Invoice 2025-10-29 before GR 2025-11-10 — fraud signal
+EXC_GR_DATE_AFTER_INVOICE,PO-2025-0060,INV-2025-0060,GR-2025-0060,False,True,False,Invoice 2025-11-03 before GR 2025-11-15 — fraud signal
