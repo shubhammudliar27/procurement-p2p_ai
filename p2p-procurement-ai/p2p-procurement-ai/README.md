@@ -104,7 +104,7 @@ and logged to MLflow:
 | **A — chosen** | Exact join + SequenceMatcher | **95.3%** | $0 |
 | B | Exact join + BGE-large-en Vector Search | 85.9% | ~$0.001/invoice |
 
-**Method A wins.** Vector Search performed worse for two specific reasons:
+**Method A wins.** Vector Search (VS) performed worse for two specific reasons:
 
 1. **False positives on borderline scores** — VS confidence threshold (0.70)
    incorrectly rejected one legitimate invoice with score 0.768.
