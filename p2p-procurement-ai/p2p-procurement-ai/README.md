@@ -91,10 +91,31 @@ All results logged to MLflow.
 | EXC_DUPLICATE | 8 | 8 | 100% |
 | EXC_GR_DATE_AFTER_INVOICE | 4 | 4 | 100% |
 | **Overall** | **61** | **64** | **95.3%** |
-
 The 3 misclassifications are documented boundary cases:
 - 2 × EXC_PRICE scenarios with deviation < 5% (within tolerance window by design)
 - 1 × MATCH_TOLERANCE with extracted amount variance on a multi-line document
+## Method Comparison — SequenceMatcher vs Vector Search
+
+Two vendor matching approaches were evaluated against the 64-row golden test set
+and logged to MLflow:
+
+| Method | Approach | Accuracy | Cost |
+|---|---|---|---|
+| **A — chosen** | Exact join + SequenceMatcher | **95.3%** | $0 |
+| B | Exact join + BGE-large-en Vector Search | 85.9% | ~$0.001/invoice |
+
+**Method A wins.** Vector Search performed worse for two specific reasons:
+
+1. **False positives on borderline scores** — VS confidence threshold (0.70)
+   incorrectly rejected one legitimate invoice with score 0.768.
+
+2. **False negatives on wrong-vendor fraud** — VS retrieves semantically
+   similar POs from the same vendor across all documents, missing the
+   vendor identity mismatch. 5 wrong-vendor fraud cases incorrectly approved.
+
+**VS retained in architecture** for two specific use cases where it genuinely
+adds value: po_number extraction failure fallback and near-duplicate invoice
+detection. Both runs logged to MLflow.
 
 ---
 
