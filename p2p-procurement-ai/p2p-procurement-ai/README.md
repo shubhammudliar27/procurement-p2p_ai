@@ -87,7 +87,7 @@ Step 3 — Understanding the document (Silver layer)
 
 Step 4 — Three-way check (Gold layer)
   System joins the invoice to its matching PO and GR
-  Checks across 5 paths:
+  Checks across various paths:
     ✅ Exact match     → approve immediately
     ✅ Tolerance match → approve (within 5% price variation)
     ✅ Fuzzy match     → approve (vendor name variation resolved)
