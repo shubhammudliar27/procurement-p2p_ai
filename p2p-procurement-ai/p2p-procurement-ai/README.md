@@ -401,4 +401,4 @@ p2p-procurement-ai/
 Senior Technical Consultant — Data & AI | 8+ years enterprise data engineering
 Microsoft Fabric Data Engineer Associate (DP-700)
 
-[LinkedIn](https://linkedin.com/in/your-profile) | [GitHub](https://github.com/shubhammudliar27)
+[LinkedIn](https://www.linkedin.com/in/shubham-mudliar) | [GitHub](https://github.com/shubhammudliar27)
