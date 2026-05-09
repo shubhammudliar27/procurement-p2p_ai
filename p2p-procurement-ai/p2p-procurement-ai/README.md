@@ -10,7 +10,7 @@
 
 ---
 
-## The Problem
+## Problem Statement
 
 Every time a company buys something, three documents are created:
 
