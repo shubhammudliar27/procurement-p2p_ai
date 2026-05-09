@@ -28,7 +28,7 @@ agree. This is called **three-way matching**:
 
 In most organisations today, this process is entirely manual:
 
-1. An AP (Accounts Payable) clerk receives a PDF invoice by email
+1. An AP (Accounts Payable) associate receives a PDF invoice by email
 2. They open the ERP system and search for the matching PO number
 3. They open the warehouse system and find the corresponding GR
 4. They compare quantities, prices, vendor names, and dates across all three
