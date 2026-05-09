@@ -10,7 +10,7 @@
 
 ---
 
-## The Problem — In Plain English
+## The Problem
 
 Every time a company buys something, three documents are created:
 
