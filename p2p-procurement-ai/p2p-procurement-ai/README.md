@@ -16,7 +16,7 @@ Every time a company buys something, three documents are created:
 
 - **Purchase Order (PO)** — the company says *"we want to buy X units of Y from vendor Z at price P"*
 - **Goods Receipt (GR)** — the warehouse says *"we received X units of Y from vendor Z on date D"*
-- **Invoice** — the vendor says *"please pay us AED X for Y units delivered"*
+- **Invoice** — the vendor says *"please pay us currency X for Y units delivered"*
 
 Before paying an invoice, the finance team must verify that all three documents
 agree. This is called **three-way matching**:
