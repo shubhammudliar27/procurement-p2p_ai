@@ -63,7 +63,7 @@ This project automates the entire three-way match process:
 - Only genuine exceptions reach the AP team — pre-investigated with context
 - Every decision is logged in an immutable audit trail for compliance
 
-**Result: sub-30-second processing per invoice. Human review only for genuine exceptions.**
+**Result: 30-second processing per invoice. Human review only for genuine exceptions.**
 
 ---
 
